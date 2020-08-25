@@ -3,7 +3,47 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-        link(rel="stylesheet", href="styles/main.min.css")
+        title ООО "Реха-Медика"
     body
-        h1 Hi world! haha
+        div(class="wrapper")
+            header(class="header")
+                .header__top
+                    .header__left
+                        .header__logo Лого
+                        .header__info
+                            .header__phone +7 (4012) 777-666
+                            .header__address г. Калининград, Московский пр-кт, 40 (ББЦ)
+                    .header__right
+                        button.btn Обратный звонок
+                .header__bottom
+                    nav.menu
+                        - var links = {'Главная':'/', 'Участникам госзакупок':'/', 'Поставщикам':'/', 'Контакты':'/'};
+                        ul.menu__list
+                            each link, value in links
+                                li.menu__item
+                                    a.menu__link(href=`${link}`)= value
+                    .socials
+                        - var socials = {'email': 'example@mail.ru', 'telegram':'89118659366', 'whatsapp':'89118659366', 'viber':'89118659366'} 
+                        ul.socials__list
+                            each link, value in socials
+                                li.socials__item
+                                    a.socials__link(href=`${link}`)= value
+            section.section-slider
+                .slider
+                    - var images = [1,2,3]
+                    ul.slider__list
+                        each number, index in images
+                            li.slider__item
+                                img(src=`/images/slider/${number}.jpg`, alt="")
+                                .slider__title ПРОДАЖА МЕДИЦИНСКОГО ОБОРУДОВАНИЯ И МЕБЕЛИ В КАЛИНИНГРАДЕ
+                                .slider__desc Комплектация лечебно-профилактических учреждений по <a href="/">СТАНДАРТАМ ОСНАЩЕНИЯ</a>
+            section.section-clients
+                .clients
+                    h2.clients__title Наши клиенты
+                    ul.clients__list
+                        li.clients__item
+                            
+
+
+                
+                

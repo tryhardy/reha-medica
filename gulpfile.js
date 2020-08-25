@@ -43,6 +43,12 @@ task('copy:html', () => {
     .pipe(reload({stream:true}));
 });
 
+task('copy:img', () => {
+  return src(`${SRC_PATH}/images/**/*`)
+  .pipe(dest(`${DIST_PATH}/images`))
+  .pipe(reload({stream:true}));
+});
+
 task('pug', function buildHTML() {
   return src(`${SRC_PATH}/*.pug`)
   .pipe(pug({
@@ -97,7 +103,7 @@ task('server', function() {
 });
 
 task('svg', () => {
-  return src(`${SRC_PATH}/images/icons/*.svg`)
+  return src(`${SRC_PATH}/icons/*.svg`)
     .pipe(svgo({
       plugins: [
         {
@@ -115,8 +121,9 @@ if(env === 'dev') {
   watch(`./${SRC_PATH}/**/*`, series("copy:html"));
   watch(`./${SRC_PATH}/**/*`, series("scripts"));
   watch(`./${SRC_PATH}/**/*`, series("pug"));
+  watch(`./${SRC_PATH}/images/*`, series("copy:img"));
 }
 
-task("default", series("clean", parallel("pug", "styles", "scripts", 'svg'), "server"));
+task("default", series("clean", parallel("pug", "styles", "scripts", 'svg', 'copy:img'), "server"));
 
-task("build", series("clean", parallel("pug", "styles", "scripts", 'svg')));
+task("build", series("clean", parallel("pug", "styles", "scripts", 'svg', 'copy:img')));
