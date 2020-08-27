@@ -1,0 +1,28 @@
+.socials {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display:flex;
+  }
+
+  &__item {
+    margin-right:15px;
+
+    &:last-child {
+      margin-right:0px;
+    }
+  }
+
+  &__link {
+    font-size: 0;
+    width: 23px;
+    height: 23px;
+    display: block;
+    fill: $darkgray;
+
+    &:hover {
+      fill:$seavawe;
+    }
+  }
+}

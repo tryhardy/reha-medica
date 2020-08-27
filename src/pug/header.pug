@@ -1,0 +1,25 @@
+header(class="header")
+    .header__top
+        .container
+            .header__left
+                .header__logo 
+                    img(src="/images/logo.svg", alt="")
+                .header__info
+                    .header__phone +7 (4012) 777-666
+                    .header__address г. Калининград, Московский пр-кт, 40 (ББЦ)
+                .header__right
+                    button.btn Обратный звонок
+    .header__bottom
+        .container.container--flex
+            nav.menu
+                - var links = {'Главная':'/', 'Участникам госзакупок':'/', 'Поставщикам':'/', 'Контакты':'/'};
+                ul.menu__list
+                    each link, value in links
+                        li.menu__item
+                            a.menu__link(href=`${link}`)= value
+            .socials
+                - var socials = {'email': 'example@mail.ru', 'telegram':'89118659366', 'whatsapp':'89118659366', 'viber':'89118659366'} 
+                ul.socials__list
+                    each link, value in socials
+                        li.socials__item
+                            a.socials__link(href=`${link}`) <svg xmlns="http://www.w3.org/2000/svg"><path d="M11.5.36C5.147.36.5 5.102.5 11.256c0 6.155 4.647 11.384 11 11.384s11-5.23 11-11.384S17.853.36 11.5.36zm5.648 7.632l-1.887 8.616c-.14.61-.515.759-1.039.471l-2.875-2.053L9.96 16.32c-.153.148-.282.274-.58.274l.205-2.834 5.328-4.663c.232-.198-.051-.31-.357-.113L7.97 13l-2.838-.858c-.616-.188-.63-.597.13-.885L16.35 7.116c.515-.18.965.12.798.876z"/></svg>

@@ -1,3 +1,31 @@
-body{
-    background-color:yellow;
+.header {
+  &__top {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid $gray300;
+  }
+  &__bottom {
+    display: flex;
+  }
+  &__left {
+    display: flex;
+    flex: 1;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  &__info {
+    flex: 1;
+    text-align: right;
+  }
+  &__phone {
+    color:$blue700;
+    font-weight: 700;
+    font-size: 16px;;
+  }
+  &__address {
+    font-size: 14px;
+  }
 }

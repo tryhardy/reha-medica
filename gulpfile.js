@@ -69,7 +69,7 @@ task('styles', () => {
     overrideBrowserslist:["last 2 versions"],
     cascade: false
   }))
-  .pipe(px2rem())
+  /*.pipe(px2rem())*/
   .pipe(gulpif(env === 'prod', cleanCSS({compatibility: 'ie8'})))
   .pipe(gulpif(env === 'prod', minify({
     minify: true,

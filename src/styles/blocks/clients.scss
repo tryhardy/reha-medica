@@ -1,0 +1,67 @@
+.section-clients {
+  height: 520px;
+  position: relative;
+  width: 100%;
+}
+
+.clients {
+  width: 100%;
+  height: 100%;
+
+  &__list {
+    display: flex;
+    margin-top: 100px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    width:60px;
+    height:60px;
+    fill:$seavawe;
+    transition: .3s;
+
+    svg {
+      width:100%;
+      height:100%;
+    }
+
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__header {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 10px;
+  }
+
+  &__title {
+    line-height: 1;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-transform: uppercase;
+    font-size: 1500%;
+    font-weight: bold;
+    text-align: right;
+    color: #D8D8D8;
+    opacity: .2;
+    margin-top: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+
+    green {
+      color:$seavawe;
+    }
+  }
+}

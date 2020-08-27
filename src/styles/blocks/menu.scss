@@ -1,0 +1,22 @@
+.menu {
+  flex: 1;
+
+  &__list {
+    display: flex;
+  }
+  &__item {
+    &:first-child .menu__link{
+      padding-left:0;
+    }
+  }
+  &__link {
+    padding:20px;
+    color:$darkgray;
+    display: block;
+    font-size: $small-font-size;
+
+    &:hover {
+      color:$seavawe;
+    }
+  }
+}
