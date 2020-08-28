@@ -3,9 +3,42 @@
   border: none;
   outline: none;
   padding: 10px 20px;
-  background-color: #00a099;
+  background-color: $seavawe;
   color: white;
   font-weight: 600;
   font-size: 14px;
   transition: all .3s;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 30px;
+    width: 35px;
+    height: 130px;
+    cursor: pointer;
+    transition: .3s;;
+
+    &__circle {
+      position: absolute;
+      width: 40px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translate(-50%, -50%);
+      transition: .3s;
+      fill: $seavawe;
+      opacity: .3;
+    }
+
+    &__arrow {
+      top: 10px;
+      position: absolute;
+      transition: .3s;
+    }
+
+    &:hover {
+      .arrow__arrow {
+        top: 30px;
+      }
+    }
 }
