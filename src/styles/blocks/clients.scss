@@ -44,6 +44,7 @@
     font-size: 24px;
     line-height: 1;
     margin-top: 10px;
+    letter-spacing: 0.2em;
   }
 
   &__title {
@@ -63,5 +64,30 @@
     green {
       color:$seavawe;
     }
+  }
+}
+
+@include mobile {
+  .section-clients {
+    height: 100%;
+  }
+  .clients__title {
+    position: relative;
+    font-size: 48px;
+    color: #2b2a29;
+    opacity: 1;
+    text-align: center;
+    left: 0;
+    margin-top: 50px;
+  }
+  .clients__list {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .clients__item {
+    margin-bottom: 40px;
+    max-width: 50%;
   }
 }

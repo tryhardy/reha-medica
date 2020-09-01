@@ -5,14 +5,16 @@ header(class="header")
                 .header__logo 
                     img(src="/images/logo.svg", alt="")
                 .header__info
-                    .header__phone +7 (4012) 777-666
+                    .header__phone +7 4012 538-168
                     .header__address г. Калининград, Московский пр-кт, 40 (ББЦ)
                 .header__right
                     button.btn Обратный звонок
     .header__bottom
         .container.container--flex
             nav.menu
-                - var links = {'Главная':'/', 'Участникам госзакупок':'/', 'Поставщикам':'/', 'Контакты':'/'};
+                - var links = {'Главная':'/', 'Участникам госзакупок':'/', 'Поставщикам':'/', 'Контакты':'/contacts.html'};
+                .menu__mobile
+                    .menu__mobile-line
                 ul.menu__list
                     each link, value in links
                         li.menu__item

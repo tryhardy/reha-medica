@@ -21,11 +21,28 @@
     text-align: right;
   }
   &__phone {
-    color:$blue700;
+    color:$gray900;
     font-weight: 700;
     font-size: 16px;;
   }
   &__address {
     font-size: 14px;
+  }
+
+
+  @include tablets {
+    .header__right {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    .header__left {
+      flex-direction: column;
+    }
+    .header__info {
+      margin-top: 15px;
+      text-align: left;
+    }
   }
 }

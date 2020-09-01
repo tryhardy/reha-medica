@@ -79,3 +79,48 @@ ul {
 a {
   transition: .3s;
 }
+
+.section-title {
+  max-width: 424px;
+  width: 100%;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: $darkgray;
+}
+.section-title--seavawe {
+  color:$seavawe;
+}
+.section-description {
+  font-weight: 300;
+  max-width: 400px;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+
+.page-title {
+  padding-top:100px;
+  width: 100%;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: $darkgray;
+  margin-bottom: 20px;
+}
+.page-title--seavawe {
+  color:$seavawe;
+}
+.page-description {
+  font-weight: 300;
+  font-style: italic;
+  padding-bottom: 100px;
+}
+
+.section--bg {
+  background-image: url('/images/bg.png');
+  background-size: cover;
+  background-position: right;
+}

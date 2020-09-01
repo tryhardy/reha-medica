@@ -12,6 +12,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    background-size: cover;
 
     img {
       width: 100%;
@@ -45,4 +46,16 @@
     }
   }
 
+}
+
+@include mobile {
+  .slider__title {
+    font-size: 48px;
+    max-width: 100%;
+  }
+  .slider__desc {
+    max-width: 100%;
+    font-size: 16px;
+    margin-top: 15px;
+  }
 }

@@ -1,15 +1,30 @@
 section.scope {
   background-color: #2B2A29;
   position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  min-height: 520px;
 
   .scope_bg {
     display: none;
     position: absolute;
     right: 0;
     top: 0;
+    min-width: 100%;
     height: 100%;
     mix-blend-mode: luminosity;
     opacity: 0.56;
+    object-fit: cover;
+  }
+
+  .scope_block {
+    width: 100%;
+    height: 800px;
+    background-color: #2b2a29;
+    position: absolute;
+    top: -50%;
+    left: -30%;
+    transform: rotate(-60deg);
   }
 
   .inner {
@@ -21,6 +36,10 @@ section.scope {
     color: #fff;
     max-width: 424px;
     width: 100%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+    line-height: 1.2;
   }
 
   .scope_row {
@@ -53,6 +72,7 @@ section.scope {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     transition: 0.2s ease-in-out;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 
     &:hover {
       opacity: 1;
@@ -74,7 +94,7 @@ section.scope {
   }
 
   .scope_cards__item {
-    /*background: $vineGradient;*/
+    background: $seavawe;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -101,8 +121,56 @@ section.scope {
       opacity: 1;
     }
 
-    img {
+    svg {
+      width: 45px;
+      height: 18px;
+      fill: white;
       margin-left: 15px;
     }
+  }
+}
+
+.shown {
+  display: block!important;
+}
+
+.shown-flex {
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+}
+
+.green-colored {
+  color: $seavawe;
+}
+
+@include mobile {
+  section.scope {
+    overflow: visible;
+    min-height: auto;
+  }
+  .scope_cards {
+    flex-direction: column;
+  }
+  .scope_cards__item {
+    margin-bottom: 20px;
+  }
+  .scope_block {
+    display: none;
+  }
+  .scope_title {
+    text-align: center;
+  }
+  .scope_row {
+    flex-direction: column;
+  }
+  .scope_list {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    margin-left: 40px;
+    margin-bottom: 40px;
   }
 }
