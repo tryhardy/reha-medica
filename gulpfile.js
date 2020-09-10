@@ -30,7 +30,7 @@ const styles = [
 /*массив сскриптов для таска*/
 const libs = [
   ...JS_LIBS,
-  'src/scripts/*.js'
+  'src/js/*.js'
 ];
 
 task('clean', () => {

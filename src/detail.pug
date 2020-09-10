@@ -14,6 +14,8 @@ html(lang="en")
         .container
           h1.page-title ООО “РЕАМЕД”
           p.page-description.page-description--large  ООО “РЕАМЕД”. РЕАГЕНТЫ, ВАКУУМНЫЕ СИСТЕМЫ, ГЕМАТОЛОГИЧЕСКИЕ АНАЛИЗАТОРЫ
+          .company__about-logo
+            img(src="/images/reamed-logo.png", alt="Логотип ООО “РЕАМЕД”")
           div.page-link
             a(href="http://www.reamed.ru") www.reamed.ru
           
@@ -23,15 +25,25 @@ html(lang="en")
                 p Главным отличием ООО "РЕАМЕД" от многих компаний, работающих на медицинском рынке в России, стала специализация в области производства гематологических реагентов.
                 p Cегодня компания ООО "РЕАМЕД " является лидирующим российским производителем. Весь технологический цикл осуществляется на собственной производственной базе. В целях обеспечения качества все звенья производства начиная от входного контроля сырья и тары, и заканчивая контролем ОТК готовой продукции - строго регламентированы.
                 p Компания получила сертификат ISO 9001 в 2007 году, что позволило серьёзно расширить позиции нашей продукции на российском рынке и выйти на зарубежные. По самым скромным подсчётам, каждый 4-й гематологический анализатор в России обслуживается на наших реагентах.
-              .company__about-logo
-                img(src="/images/reamed-logo.png", alt="Логотип ООО “РЕАМЕД”")
-
+        
             .company__tabs
               .tabs
                 - var tabs = [{link: "#", title: 'Заголовок'}, {link: "#", title: 'Заголовок'}, {link: "#", title: 'Заголовок'}, {link: "#", title: 'Заголовок'},];
                 ul.tabs__list
                   each tab, index in tabs
                     +tab-title(tab.title, tab.link)
+            
+      section.medicineList
+        .container
+          .slider
+              .slider_item
+                  img.slider_item__image(src="/images/slider/main-slider-image1.jpg", alt="Пассамбра") 
+              .slider_item
+                  img.slider_item__image(src="/images/slider/main-slider-image1.jpg", alt="Пассамбра") 
+              .slider_item
+                  img.slider_item__image(src="/images/slider/main-slider-image1.jpg", alt="Пассамбра") 
+              .slider_item
+                  img.slider_item__image(src="/images/slider/main-slider-image1.jpg", alt="Пассамбра") 
 
 
       include pug/footer.pug

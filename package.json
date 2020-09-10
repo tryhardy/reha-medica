@@ -38,7 +38,9 @@
     "pug": "^3.0.0"
   },
   "dependencies": {
+    "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
-    "query": "^0.2.0"
+    "query": "^0.2.0",
+    "slick-carousel": "^1.8.1"
   }
 }
