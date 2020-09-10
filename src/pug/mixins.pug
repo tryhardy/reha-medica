@@ -7,12 +7,15 @@ mixin image(path, className)
   img(src=require(`images/${path}`) class=className)
 
 
+mixin tab-title(title, link)
+  li.tabs__item
+    a(href=link)= title
 mixin scope-card(title, link)
   .scope_cards__item
     span.card_title= title
     a.card_link(href=link) Подробнее
         <svg xmlns="http://www.w3.org/2000/svg"><path d="M40.707 8.707a1 1 0 000-1.414L34.343.929a1 1 0 10-1.414 1.414L38.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h40V7H0v2z"/></svg>
-mixin providers-item(title, desc)
+mixin providers-item(title, desc, link)
   .providers__item
     .providers__container
       .providers__bg
@@ -26,9 +29,9 @@ mixin providers-item(title, desc)
 
         h3.providers__title= title
         p.providers__desc= desc
-        a.providers__link(href="#") Подробнее
+        a.providers__link(href=link) Подробнее
           <svg xmlns="http://www.w3.org/2000/svg"><path d="M40.707 8.707a1 1 0 000-1.414L34.343.929a1 1 0 10-1.414 1.414L38.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h40V7H0v2z"/></svg>
-mixin providers-item-large(title, desc)
+mixin providers-item-large(title, desc, link)
   .providers__item.providers__item--large
     .providers__container(style="background-image: url(/images/one.jpg);background-position:right;")
       .providers__bg
@@ -41,9 +44,9 @@ mixin providers-item-large(title, desc)
           </svg>
         h3.providers__title= title
         p.providers__desc= desc
-        a.providers__link(href="#") Подробнее
+        a.providers__link(href=link) Подробнее
           <svg xmlns="http://www.w3.org/2000/svg"><path d="M40.707 8.707a1 1 0 000-1.414L34.343.929a1 1 0 10-1.414 1.414L38.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h40V7H0v2z"/></svg>
-mixin providers-item-dark(title, desc)
+mixin providers-item-dark(title, desc, link)
   .providers__item.providers__item--dark
     .providers__container
       .providers__bg
@@ -57,5 +60,5 @@ mixin providers-item-dark(title, desc)
 
         h3.providers__title= title
         p.providers__desc= desc
-        a.providers__link(href="#") Подробнее
+        a.providers__link(href=link) Подробнее
           <svg xmlns="http://www.w3.org/2000/svg"><path d="M40.707 8.707a1 1 0 000-1.414L34.343.929a1 1 0 10-1.414 1.414L38.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h40V7H0v2z"/></svg>

@@ -145,22 +145,31 @@ section.scope {
   color: $seavawe;
 }
 
-@include mobile {
+@include desktop {
   section.scope {
     overflow: visible;
     min-height: auto;
   }
+
+  .scope_cards__item {
+    max-width:30%;
+  }
+}
+
+@include tablets {
   .scope_cards {
     flex-direction: column;
   }
   .scope_cards__item {
     margin-bottom: 20px;
+    max-width: auto;
   }
   .scope_block {
     display: none;
   }
   .scope_title {
     text-align: center;
+    margin:auto;
   }
   .scope_row {
     flex-direction: column;

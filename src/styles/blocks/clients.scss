@@ -67,7 +67,7 @@
   }
 }
 
-@include mobile {
+@include desktop {
   .section-clients {
     height: 100%;
   }
@@ -89,5 +89,12 @@
   .clients__item {
     margin-bottom: 40px;
     max-width: 50%;
+  }
+}
+
+
+@include mobile {
+  .clients__item {
+    max-width: 80%;
   }
 }
