@@ -3,17 +3,23 @@
   border: none;
   outline: none;
   padding: 10px 20px;
-  background-color: $seavawe;
-  color: white;
+  background-color: transparent;
+  color: $seavawe;
+  border: 2px solid $seavawe;
   font-weight: 600;
   font-size: 14px;
   transition: all .3s;
+
+  &:hover {
+    border: 2px solid $gray600;
+    color:$gray600;
+  }
 }
 
 .arrow {
     position: absolute;
     bottom: 30px;
-    width: 35px;
+    width: 20px;
     height: 130px;
     cursor: pointer;
     transition: .3s;;

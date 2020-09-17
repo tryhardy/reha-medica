@@ -11,7 +11,7 @@
   }
   &__link {
     padding:20px;
-    color:$darkgray;
+    color:white;
     display: block;
     font-size: $small-font-size;
 
@@ -51,7 +51,7 @@
         content: "";
         width: 100%;
         height: 4px;
-        background-color: $gray900;
+        background-color: white;
         position: absolute;
         left: 0;
         top: 13px;
@@ -62,7 +62,7 @@
         content: "";
         width: 100%;
         height: 4px;
-        background-color: $gray900;
+        background-color: white;
         position: absolute;
         left: 0;
         bottom: 13px;
@@ -74,7 +74,7 @@
     &__mobile-line {
       width: 100%;
       height: 4px;
-      background-color: $gray900;
+      background-color: white;
       position: absolute;
       left: 0;
       top: 50%;

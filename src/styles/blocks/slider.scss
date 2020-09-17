@@ -1,25 +1,17 @@
 .slider {
-  height: 520px;
-  overflow: hidden;
+  // height: 520px;
+  // overflow: hidden;
 
   &__list {
-    display: flex;
     height: 100%;
   }
   &__item {
-    min-width: 100%;
-    height: 100%;
     position: relative;
-    display: flex;
-    align-items: center;
-    background-size: cover;
 
     img {
+      max-height: 80vh;
       width: 100%;
-      height: 100%;
-      object-fit:cover;
-      opacity: 0.7;
-
+      object-fit: cover;
     }
   }
   &__title {
@@ -46,6 +38,22 @@
     }
   }
 
+  &__content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 1300px;
+    left: 50%;
+    top: 50%;
+    padding: 0 15px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+
 }
 
 @include desktop {
@@ -64,5 +72,43 @@
   }
   .slider__desc {
     font-size: 16px;
+  }
+}
+
+.section-slider {
+  .slider {
+    height:100%;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      margin-right:20px;
+
+      &:focus {
+        outline:none;
+      }
+    }
+    button {
+      border:0;
+      font-size:0;
+      width:15px;
+      height:15px;
+      border-radius: 50%;
+
+      &:focus {
+        outline:none;
+      }
+    }
+    .slick-active {
+      button {
+        background-color:$pink;
+      }
+    }
   }
 }

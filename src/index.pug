@@ -13,10 +13,11 @@ html(lang="en")
             section.section-slider
                 .slider
                     - var images = [1,1,1]
-                    ul.slider__list
+                    .slider__list
                         each number, index in images
-                            li.slider__item(style=`background-image:url(/images/slider/${number}.jpg)`)
-                                .container
+                            .slider__item()
+                                img(src="/images/slider/mask.jpg")
+                                .slider__content
                                     .slider__title ПРОДАЖА <green>МЕДИЦИНСКОГО ОБОРУДОВАНИЯ И МЕБЕЛИ</green> В КАЛИНИНГРАДЕ
                                     .slider__desc Комплектация лечебно-профилактических учреждений по <a href="/">СТАНДАРТАМ ОСНАЩЕНИЯ</a>
             section.section-clients
@@ -68,16 +69,16 @@ html(lang="en")
                                     a(href="#" data-scope="3") Медицинская мебель
                             .scope_cards.shown-flex(data-scope="1")
                                 
-                                +scope-card('Химия для дезинфекции и уборки', '#')
-                                +scope-card('Химия для дезинфекции и уборки', '#')
-                                +scope-card('Химия для дезинфекции и уборки', '#')
+                                +scope-card('Химия для дезинфекции и уборки', '/section.html')
+                                +scope-card('Химия для дезинфекции и уборки', '/section.html')
+                                +scope-card('Химия для дезинфекции и уборки', '/section.html')
                             .scope_cards(data-scope="2")
-                                +scope-card('Aртериальная гипертензия', '#')
-                                +scope-card('ССЗ и соматоформные,  астенические, тревожные расстройства', '#')
-                                +scope-card('ХСН II-III ФК', '#')
+                                +scope-card('Aртериальная гипертензия', '/section.html')
+                                +scope-card('ССЗ и соматоформные,  астенические, тревожные расстройства', '/section.html')
+                                +scope-card('ХСН II-III ФК', '/section.html')
                             .scope_cards(data-scope="3")
-                                +scope-card('ХСН II-III ФК', '#')
-                                +scope-card('Шизофрения', '#')
+                                +scope-card('ХСН II-III ФК', '/section.html')
+                                +scope-card('Шизофрения', '/section.html')
             section.providers-section
                 .container       
                     h2.section-title.section-title--seavawe Наши поставщики
